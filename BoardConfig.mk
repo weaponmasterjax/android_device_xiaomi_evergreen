@@ -181,7 +181,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 #SHRP
 SHRP_DEVICE_CODE := evergreen
 SHRP_PATH := device/xiaomi/evergreen
-SHRP_MAINTAINER := mmtrt
+SHRP_MAINTAINER := weaponmasterjax
 SHRP_DEVICE_TYPE := A/B
 SHRP_REC := /dev/block/platform/bootdevice/by-name/boot
 SHRP_REC_TYPE := SAR
