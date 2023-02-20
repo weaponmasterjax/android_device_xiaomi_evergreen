@@ -179,8 +179,8 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
 #SHRP
-SHRP_DEVICE_CODE := evergreen
-SHRP_PATH := device/xiaomi/evergreen
+SHRP_DEVICE_CODE := evergo
+SHRP_PATH := device/xiaomi/evergo
 SHRP_MAINTAINER := weaponmasterjax
 SHRP_DEVICE_TYPE := A/B
 SHRP_REC := /dev/block/platform/bootdevice/by-name/boot
