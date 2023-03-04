@@ -61,7 +61,7 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31
+    ro.vendor.build.security_patch=2077-12-31
 
 # Health HAL
 PRODUCT_PACKAGES += \
