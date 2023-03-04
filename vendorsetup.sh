@@ -19,7 +19,7 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
-FDEVICE="evergreen"
+FDEVICE="evergo"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -38,13 +38,13 @@ fi
 
 # Dirty Fix: Only declare orangefox vars when needed
 if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
-	echo -e "\x1b[96m[INFO]: Setting up OrangeFox build vars for evergreen...\x1b[m"
+	echo -e "\x1b[96m[INFO]: Setting up OrangeFox build vars for evergo...\x1b[m"
 	if [ "$1" = "$FDEVICE" ] || [  "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		# Version / Maintainer infos
-		export OF_MAINTAINER="mmtrt"
+		export OF_MAINTAINER="Weaponmasterjax@coolapk"
 		export FOX_VERSION=R11.1_1
 		export FOX_BUILD_TYPE="Unofficial"
-        export FOX_VARIANT="R"
+        export FOX_VARIANT="R-MIUI12.5"
 
 		# ensure that /sdcard is bind-unmounted before f2fs data repair or format
 		export OF_UNBIND_SDCARD_F2FS=1
@@ -53,7 +53,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_AB_DEVICE=1
 		export OF_VIRTUAL_AB_DEVICE=1
 		export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
-		export TARGET_DEVICE_ALT="evergo, opal"
+		export TARGET_DEVICE_ALT="evergreen, opal"
 
 		# OTA / DM-Verity / Encryption
 		export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
@@ -74,8 +74,8 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export FOX_USE_NANO_EDITOR=1
 
 		# no special MIUI stuff
-		export OF_VANILLA_BUILD=1
-		export OF_NO_MIUI_PATCH_WARNING=1
+		export OF_VANILLA_BUILD=0
+		export OF_NO_MIUI_PATCH_WARNING=0
 
 		# full size
 		export OF_DYNAMIC_FULL_SIZE=9126805504
@@ -96,7 +96,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_QUICK_BACKUP_LIST="/boot;/data;"
 		export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800" # Tue Jan 1 2019 00:00:00 GMT
 		export FOX_DELETE_AROMAFM=1
-		export FOX_USE_SPECIFIC_MAGISK_ZIP="$(gettop)/device/xiaomi/evergreen/Magisk/Magisk.zip"
+		export FOX_USE_SPECIFIC_MAGISK_ZIP="$(gettop)/device/xiaomi/evergo/Magisk/Magisk.zip"
 
 		export BUNDLED_MAGISK_VER="$(wget -qO- "https://github.com/topjohnwu/Magisk/releases" | grep -Eo "Magisk v.*" | cut -d'<' -f1 |  awk '{print $2}' | head -1)"
 		export BUNDLED_MAGISK_SUM="$(curl -sL "https://github.com/topjohnwu/Magisk/releases/download/${BUNDLED_MAGISK_VER}/Magisk-${BUNDLED_MAGISK_VER}.apk"  | tee mgsk | sha256sum | awk '{print $1}' && rm mgsk)" # Sha256 sum of the prebuilt magisk
