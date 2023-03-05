@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/evergreen
+LOCAL_PATH := device/xiaomi/evergo
 
 # A/B
 AB_OTA_PARTITIONS += \
