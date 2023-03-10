@@ -32,6 +32,10 @@ on post-fs
     symlink /dev/block/mapper/pl_b /dev/block/by-name/preloader_raw_b
     symlink /dev/block/mapper/pl_a /dev/block/platform/bootdevice/by-name/preloader_raw_a
     symlink /dev/block/mapper/pl_b /dev/block/platform/bootdevice/by-name/preloader_raw_b
+    
+    # Start the Boot HAL
+    start boot-hal-1-2
+    
 
 on post-fs-data
     chown system system /sys/bus/i2c/drivers/aw8697_haptic/2-005a/f0_save
