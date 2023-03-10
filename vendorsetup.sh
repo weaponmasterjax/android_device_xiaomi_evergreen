@@ -89,7 +89,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_CLOCK_POS=1 # left and right clock positions available
 		export OF_USE_GREEN_LED=0
 		export OF_FL_PATH1="/system/flashlight" # See /init.recovery.mt6785.rc for more information
-
+		export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
 		# Other OrangeFox configs
 		export OF_ENABLE_LPTOOLS=1
 		export OF_ALLOW_DISABLE_NAVBAR=0
