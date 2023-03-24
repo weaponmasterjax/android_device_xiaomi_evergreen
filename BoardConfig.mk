@@ -195,7 +195,7 @@ SHRP_EXTERNAL := /external_sd
 SHRP_OTG := /usb_otg
 SHRP_AB := true
 SHRP_NOTCH := true
-SHRP_DARK := true
+SHRP_DARK := false
 SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := "/system/flashlight/brightness"
 
