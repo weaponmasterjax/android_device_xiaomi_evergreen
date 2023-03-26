@@ -197,7 +197,7 @@ SHRP_AB := true
 SHRP_NOTCH := true
 SHRP_DARK := true
 SHRP_CUSTOM_FLASHLIGHT := true
-SHRP_FONP_1 := "/system/flashlight/brightness"
+SHRP_FONP_1 := "/system/flashlight"
 
 # SHRP Addons
 SHRP_SKIP_DEFAULT_ADDON_1 := true
