@@ -169,6 +169,8 @@ ifneq ($(OF_HIDE_NOTCH),1)
     TW_CUSTOM_CPU_POS := 605
     TW_STATUS_ICONS_ALIGN := center
 endif
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # Decryption
 TW_INCLUDE_CRYPTO := true
