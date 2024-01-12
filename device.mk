@@ -20,26 +20,13 @@ LOCAL_PATH := device/xiaomi/evergo
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
-    dpm \
     dtbo \
-    gz \
-    lk \
-    logo \
-    mcupm \
-    md1img \
-    pi_img \
-    preloader \
     product \
-    scp \
-    spmfw \
-    sspm \
     system \
-    tee \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor \
-    vendor \
-    vendor_boot
+    vendor
     
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -70,10 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl.recovery \
-    android.hardware.boot@1.1-impl \
-    android.hardware.boot@1.1-mtkimpl.recovery \
-    android.hardware.boot@1.1-mtkimpl
+    android.hardware.boot@1.1-mtkimpl.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl

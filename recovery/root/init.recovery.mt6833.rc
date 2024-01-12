@@ -33,8 +33,21 @@ on post-fs
     symlink /dev/block/mapper/pl_a /dev/block/platform/bootdevice/by-name/preloader_raw_a
     symlink /dev/block/mapper/pl_b /dev/block/platform/bootdevice/by-name/preloader_raw_b
 
-on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+on fs
     install_keyring
+
+service keystore_auth /system/bin/keystore_auth
+    user system
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc log
+    disabled
+    seclabel u:r:recovery:s0
 
 service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     class main
@@ -66,8 +79,8 @@ service unified-script /system/bin/unified-script.sh
     oneshot
     seclabel u:r:recovery:s0
 
-on property:vendor.sys.listener.registered=true
-    start gatekeeper-1-0
+on property:hwservicemanager.ready=true
+    start teei_daemon
     start keymaster-4-0
     start gatekeeper-1-0
 
@@ -85,7 +98,7 @@ on property:ro.crypto.state=unencrypted
     stop servicemanager
     stop hwservicemanager
         
-on property:twrp.all.users.decrypted=true
+on property:twrp.decrypt.done=true
     stop teei_daemon
     stop keymaster-4-0
     stop gatekeeper-1-0
