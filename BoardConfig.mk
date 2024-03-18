@@ -194,13 +194,13 @@ SHRP_EXPRESS := true
 SHRP_EXPRESS_USE_DATA := true
 SHRP_FLASH := 1
 SHRP_CUSTOM_FLASHLIGHT := true
-SHRP_FONP_1 := "/system/flashlight/brightness"
+SHRP_FONP_1 := "/sys/devices/platform/flashlights_mt6360/torch_brightness"
 SHRP_INTERNAL := /sdcard
 SHRP_EXTERNAL := /external_sd
 SHRP_OTG := /usb_otg
 SHRP_AB := true
 SHRP_NOTCH := true
-SHRP_DARK := false
+SHRP_DARK := true
 SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
 # SHRP Addons
