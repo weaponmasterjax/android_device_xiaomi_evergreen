@@ -62,8 +62,11 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
   		
     		＃ Keymaster
   		export OF_DEFAULT_KEYMASTER_VERSION=4.1
-		
-  		# Display / Leds
+
+  	        # MediaTek
+	        export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
+  		
+                # Display / Leds
 		export OF_SCREEN_H="2400"
 		export OF_STATUS_H="100"
 		export OF_STATUS_INDENT_LEFT=48
