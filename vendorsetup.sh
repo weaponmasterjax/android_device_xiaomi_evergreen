@@ -71,18 +71,23 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_HIDE_NOTCH=1
 		export OF_CLOCK_POS=1 # left and right clock positions available
 		export OF_USE_GREEN_LED=0
-        
+        	export FOX_USE_BASH_SHELL=1
+	        export FOX_ASH_IS_BASH=1
+	        export FOX_USE_TAR_BINARY=1
+	        export FOX_USE_SED_BINARY=1
+	        export FOX_USE_XZ_UTILS=1
+	        export FOX_USE_NANO_EDITOR=1
 		# Flashlight
-	    export OF_FL_PATH1="/system/flashlight"
+	        export OF_FL_PATH1="/system/flashlight"
 		
 		# Other OrangeFox configs
 		export OF_ENABLE_LPTOOLS=1
 		export OF_ALLOW_DISABLE_NAVBAR=0
-        export OF_QUICK_BACKUP_LIST="/boot;/data;"
+                export OF_QUICK_BACKUP_LIST="/boot;/data;"
 		export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800" # Tue Jan 1 2019 00:00:00 GMT
 		export FOX_USE_SPECIFIC_MAGISK_ZIP="$(gettop)/device/xiaomi/evergo/Magisk/Magisk.zip"
 
-        export BUNDLED_MAGISK_VER="27.0"
+                export BUNDLED_MAGISK_VER="27.0"
         
         if [[ ! -f "${FOX_USE_SPECIFIC_MAGISK_ZIP}" ]]
         then
