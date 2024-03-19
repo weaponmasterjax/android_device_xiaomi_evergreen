@@ -47,7 +47,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export FOX_VARIANT=MIUI1404IN
 		# Device info
 		export OF_AB_DEVICE=1
-		export OF_VIRTUAL_AB_DEVICE=1
+		export FOX_VIRTUAL_AB_DEVICE=1
 		export TARGET_DEVICE_ALT="evergreen, evergo, opal"
 		
 		# OTA / DM-Verity / Encryption
