@@ -57,7 +57,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_DONT_PATCH_ON_FRESH_INSTALLATION=1
 		export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 		export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
-		export OF_SKIP_FBE_DECRYPTION_SDKVERSION=30 # We all know what happens
+		export OF_SKIP_FBE_DECRYPTION_SDKVERSION=34 # We all know what happens
 		export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
   		
     		＃ Keymaster
@@ -71,7 +71,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_HIDE_NOTCH=1
 		export OF_CLOCK_POS=1 # left and right clock positions available
 		export OF_USE_GREEN_LED=0
-		export OF_FL_PATH1="/sys/devices/platform/flashlights_mt6360/" # See /init.recovery.mt6785.rc for more information
+		export OF_FL_PATH1="/sys/devices/platform/flashlights_mt6360" # See /init.recovery.mt6785.rc for more information
 
 		# Other OrangeFox configs
 		export OF_ENABLE_LPTOOLS=1
