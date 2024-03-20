@@ -27,6 +27,8 @@ AB_OTA_PARTITIONS += \
     logo \
     mcupm \
     md1img \
+    odm \
+    odm_dlkm \
     pi_img \
     preloader \
     product \
@@ -34,11 +36,12 @@ AB_OTA_PARTITIONS += \
     spmfw \
     sspm \
     system \
-    tee \
+    system_ext \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor \
-    vendor
+    vendor \
+    vendor_dlkm
     
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
