@@ -18,7 +18,7 @@
 # Allow building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-DEVICE_PATH := device/xiaomi/evergreen
+DEVICE_PATH := device/xiaomi/evergo
 PREBUILT_PATH := $(DEVICE_PATH)/prebuilt
 
 # Architecture
@@ -35,7 +35,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := evergreen
+TARGET_BOOTLOADER_BOARD_NAME := evergo
 TARGET_NO_BOOTLOADER := true
 
 # Platform

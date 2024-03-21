@@ -16,9 +16,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_evergreen.mk
+    $(LOCAL_DIR)/omni_evergo.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_evergreen-user \
-    omni_evergreen-userdebug \
-    omni_evergreen-eng
+    omni_evergo-user \
+    omni_evergo-userdebug \
+    omni_evergo-eng

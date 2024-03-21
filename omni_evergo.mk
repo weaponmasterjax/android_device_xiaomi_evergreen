@@ -21,15 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Inherit from evergreen device
-$(call inherit-product, device/xiaomi/evergreen/device.mk)
+# Inherit from evergo device
+$(call inherit-product, device/xiaomi/evergo/device.mk)
 
 # Inherit some common TWRP stuff
 $(call inherit-product, vendor/pb/config/common.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := evergreen
-PRODUCT_NAME := omni_evergreen
+PRODUCT_DEVICE := evergo
+PRODUCT_NAME := omni_evergo
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 21091116AG
 PRODUCT_MANUFACTURER := Xiaomi
