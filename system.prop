@@ -20,3 +20,6 @@ ro.hardware.kmsetkey=beanpod
 
 # adb 
 ro.adb.secure=0
+
+# keymaster
+keymaster_ver=4.1
